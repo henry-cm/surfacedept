@@ -260,9 +260,10 @@ const Gallery = () => {
           Prefer to talk it through first? Send a message and we’ll help you
           scope it.
         </p>
-        <Link href="/quote" className="quote-cta">
-          Start Your Free Quote
+        <Link to="/quote" className="quote-cta">
+          reach out for a free estimate
         </Link>
+        .
       </section>
     </div>
   );
