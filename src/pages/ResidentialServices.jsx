@@ -142,7 +142,7 @@ function ResidentialServices() {
 
             <div className="image-column">
               <img
-                src="/images/res/residential.jpg"
+                src="/images/res/residential2.jpg"
                 alt="Paint prep and clean workspace"
               />
             </div>

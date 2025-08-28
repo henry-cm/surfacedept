@@ -5,14 +5,14 @@ const works = [
   {
     id: "w1",
     title: "Industrial Exterior",
-    cover: "/src/assets/gal/1/a1.jpeg",
+    cover: "/gal/1/a1.jpeg",
     images: [
-      "/src/assets/gal/1/a1.jpeg",
-      "/src/assets/gal/1/a2.jpeg",
-      "/src/assets/gal/1/a3.jpeg",
-      "/src/assets/gal/1/a7.jpeg",
-      "/src/assets/gal/1/a8.jpeg",
-      "/src/assets/gal/1/a5.jpeg",
+      "/gal/1/a1.jpeg",
+      "/gal/1/a2.jpeg",
+      "/gal/1/a3.jpeg",
+      "/gal/1/a7.jpeg",
+      "/gal/1/a8.jpeg",
+      "/gal/1/a5.jpeg",
     ],
   },
   {
