@@ -2,9 +2,6 @@ import React from "react";
 import { useState } from "react";
 import "../styles/ExteriorServices.css";
 
-import ext1 from "../assets/images/ext/exterior1.jpg";
-import ext2 from "../assets/images/ext/exterior23.jpg";
-
 const faqs = [
   {
     question: "What’s the best time of year to paint outside?",
@@ -111,7 +108,10 @@ function ExteriorServices() {
               </ul>
             </div>
             <div className="image-column">
-              <img src={ext2} alt="Freshly painted interior" />
+              <img
+                src="/images/ext/exterior1.jpg"
+                alt="Freshly painted interior"
+              />
             </div>
           </div>
           <div className="section-flex reverse">
@@ -146,7 +146,10 @@ function ExteriorServices() {
               </ul>
             </div>
             <div className="image-column">
-              <img src={ext1} alt="Paint prep and clean workspace" />
+              <img
+                src="/images/ext/exterior23.jpg"
+                alt="Paint prep and clean workspace"
+              />
             </div>
           </div>
           <h2>How We Work</h2>
