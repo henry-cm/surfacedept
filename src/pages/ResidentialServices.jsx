@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "../styles/ResidentialServices.css";
 
-import res1 from "../assets/images/res/residential1.jpg";
-import res2 from "../assets/images/res/residential.jpg";
+import res1 from "../assets/images/res/res.jpg";
+import res2 from "../assets/images/res/res2go.jpg";
 
 const faqs = [
   {
