@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 // import "../styles/CommercialServices.css";
+import com1 from "../assets/images/com/commercial1.jpg";
+import com2 from "../assets/images/com/commercial2.jpg";
 
 const faqs = [
   {
@@ -108,10 +110,7 @@ function CommercialServices() {
             </div>
 
             <div className="image-column">
-              <img
-                src="/src/assets/images/com/commercial1.jpg"
-                alt="Freshly painted interior"
-              />
+              <img src={com1} alt="Freshly painted interior" />
             </div>
           </div>
           <div className="section-flex reverse">
@@ -146,10 +145,7 @@ function CommercialServices() {
             </div>
 
             <div className="image-column">
-              <img
-                src="/src/assets/images/com/commercial4.jpg"
-                alt="Paint prep and clean workspace"
-              />
+              <img src={com2} alt="Paint prep and clean workspace" />
             </div>
           </div>
           <h2>How We Work</h2>

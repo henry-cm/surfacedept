@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/InteriorServices.css";
+import int1 from "../assets/images/int/interior2.jpg";
+import int2 from "../assets/images/int/interior3.jpg";
 
 const faqs = [
   {
@@ -111,10 +113,7 @@ function InteriorServices() {
               </ul>
             </div>
             <div className="image-column">
-              <img
-                src="/src/assets/images/int/interior2.jpg"
-                alt="Freshly painted interior"
-              />
+              <img src={int1} alt="Freshly painted interior" />
             </div>
           </div>
 
@@ -153,10 +152,7 @@ function InteriorServices() {
               </ul>
             </div>
             <div className="image-column">
-              <img
-                src="/src/assets/images/int/interior3.jpg"
-                alt="Paint prep and clean workspace"
-              />
+              <img src={int2} alt="Paint prep and clean workspace" />
             </div>
           </div>
 
