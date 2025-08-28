@@ -2,6 +2,9 @@ import React from "react";
 import { useState } from "react";
 import "../styles/ResidentialServices.css";
 
+import res1 from "../assets/images/res/residential1.jpg";
+import res2 from "../assets/images/res/residential.jpg";
+
 const faqs = [
   {
     question: "Do I need to supply the paint?",
@@ -107,10 +110,7 @@ function ResidentialServices() {
             </div>
 
             <div className="image-column">
-              <img
-                src="/src/assets/images/res/residential1.jpg"
-                alt="Freshly painted interior"
-              />
+              <img src={res2} alt="Freshly painted interior" />
             </div>
           </div>
           <div className="section-flex reverse">
@@ -141,10 +141,7 @@ function ResidentialServices() {
             </div>
 
             <div className="image-column">
-              <img
-                src="/src/assets/images/res/residential.jpg"
-                alt="Paint prep and clean workspace"
-              />
+              <img src={res1} alt="Freshly painted interior" />
             </div>
           </div>
           <h2>How We Work</h2>
