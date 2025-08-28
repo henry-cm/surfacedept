@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Hero.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -34,12 +35,12 @@ const Hero = () => {
       </div>
 
       <div className="hero-cta1">
-        <a href="/quote" className="hero-cta">
+        <Link to="/quote" className="hero-cta">
           Get a Free Quote
-        </a>
-        <a href="/contact" className="hero-cta contact-btn">
+        </Link>
+        <Link to="/contact" className="hero-cta contact-btn">
           Contact
-        </a>
+        </Link>
       </div>
     </section>
   );
