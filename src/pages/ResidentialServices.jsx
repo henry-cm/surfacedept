@@ -1,9 +1,10 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/ResidentialServices.css";
 
-import res1 from "../assets/images/res/res.jpg";
-import res2 from "../assets/images/res/res2 .jpg";
+// ✅ Import images from src so Vite bundles them
+import res1 from "../assets/images/res/residential1.jpg";
+import res2 from "../assets/images/res/residential.jpg";
 
 const faqs = [
   {
@@ -14,7 +15,7 @@ const faqs = [
   {
     question: "How much does interior painting cost?",
     answer:
-      "Pricing depends on the size of the space and prep required. For example, repainting a standard 700 sq. ft. condo typically starts around $1,000–$1,500. Quotes are always free.",
+      "Pricing depends on the size of the space and prep required. For reference, repainting a standard 700 sq. ft. condo typically starts around $1,000–$1,500. Quotes are always free.",
   },
   {
     question: "Do I need to be home while you paint?",
@@ -42,155 +43,149 @@ const faqs = [
       "We ask that small and fragile items be moved ahead of time. Larger furniture can be shifted within the room and carefully covered for protection.",
   },
   {
-    question: "What kind of finishes can I choose?",
+    question: "What finishes can I choose?",
     answer:
-      "We work with flat, matte, eggshell, satin, semi-gloss, and high-gloss finishes, depending on the room and your preference.",
+      "Flat, matte, eggshell, satin, semi-gloss, and high-gloss — we’ll recommend what fits the room and traffic level.",
   },
   {
     question: "How do you keep the space clean?",
     answer:
-      "We use drop cloths, masking, and protective coverings. At the end of each day, we tidy up so your home stays as livable as possible.",
+      "We use drop cloths, masking, and protective coverings. At day’s end we tidy so your home stays livable.",
   },
   {
     question: "Can you handle small touch-ups?",
     answer:
-      "Yes. Whether it’s a single wall or just a few repairs, we’re happy to help — and we’ll be upfront about whether touch-ups will blend seamlessly.",
+      "Yes. Whether it’s a single wall or a few repairs, we’re happy to help — and we’ll be upfront about how well touch-ups will blend.",
   },
 ];
 
 function AccordionItem({ question, answer }) {
   const [open, setOpen] = useState(false);
   return (
-    <div
-      className={`accordion-item ${open ? "open" : ""}`}
-      onClick={() => setOpen(!open)}
-    >
-      <div className="accordion-question">
+    <div className={`accordion-item ${open ? "open" : ""}`}>
+      <button
+        className="accordion-question"
+        type="button"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+      >
         {question}
         <span className="accordion-toggle">{open ? "–" : "+"}</span>
-      </div>
+      </button>
       {open && <div className="accordion-answer">{answer}</div>}
     </div>
   );
 }
-function ResidentialServices() {
+
+export default function ResidentialServices() {
   return (
     <div className="services-wrapper">
-      <div className="service-overlay1"></div>
+      <div className="service-overlay1" />
       <div className="service-container">
         <h1>RESIDENTIAL SERVICES</h1>
+
         <section className="interior-services">
           <p>
-            At <strong>Surface Dept.</strong>, we specialize in clean,
-            high-quality residential painting with an emphasis on preparation,
-            precision, and long-lasting results. Whether you're updating a
-            single room or repainting your entire home, we bring a thoughtful,
-            detail-driven approach to every project. We work efficiently,
-            respect your space, and deliver a finish that feels fresh, refined,
-            and built to last.
+            At <strong>Surface Dept.</strong> we focus on clean, high-quality
+            residential painting with careful prep, sharp lines, and durable
+            finishes. Whether it’s one room or your whole home, we work
+            efficiently, respect your space, and deliver a refined result.
           </p>
-          <br />
+
           <h2>Who This Is For</h2>
-          <p>Our residential painting services are perfect for:</p>
           <p>
-            Homeowners, condo owners, landlords, and tenants who want to refresh
-            interiors, brighten living spaces, or add a personalized touch that
-            makes a house feel like home.
+            Homeowners, condo owners, landlords, and tenants looking to refresh
+            interiors, brighten living areas, or add a personal touch.
           </p>
+
           <div className="section-flex">
             <div className="text-column">
               <h2>What We Paint</h2>
               <ul>
-                <li>Living rooms, bedrooms, and basements</li>
-                <li>Kitchens, bathrooms, and hallways</li>
-                <li>Ceilings, walls, and accent features</li>
-                <li>Doors, trim, baseboards, and crown moulding</li>
-                <li>Closets, staircases, and entryways</li>
+                <li>Living rooms, bedrooms, basements</li>
+                <li>Kitchens, bathrooms, hallways</li>
+                <li>Ceilings, walls, accent features</li>
+                <li>Doors, trim, baseboards, mouldings</li>
+                <li>Closets, staircases, entryways</li>
               </ul>
             </div>
 
             <div className="image-column">
-              <img src={res2} alt="Freshly painted interior" />
+              {/* ✅ Imported image URL works in production */}
+              <img src={res2} alt="Freshly painted living room" />
             </div>
           </div>
+
           <div className="section-flex reverse">
             <div className="text-column">
               <h2>What’s Included</h2>
               <ul>
                 <li>
-                  <strong>Upfront, Detailed Quote:</strong> Clear, line-by-line
-                  pricing so you know exactly what to expect before we begin.
+                  <strong>Detailed Quote:</strong> Clear, line-by-line pricing
+                  before we begin.
                 </li>
                 <li>
-                  <strong>Thorough Prep Work:</strong> Furniture covering, floor
-                  protection, light patching, sanding, and priming as needed.
+                  <strong>Thorough Prep:</strong> Coverings, light patching,
+                  sanding, priming as needed.
                 </li>
                 <li>
-                  <strong>Two Coats Standard:</strong> Applied for consistent
-                  color, smooth coverage, and lasting durability.
+                  <strong>Two Coats Standard:</strong> Consistent color and
+                  coverage.
                 </li>
                 <li>
-                  <strong>Hand-Applied Finish:</strong> Brush and roller
-                  application for clean edges and a professional result.
+                  <strong>Clean Edges:</strong> Brush & roller for a
+                  professional finish.
                 </li>
                 <li>
-                  <strong>Respect for Your Home:</strong> Careful masking of
-                  fixtures and trim, with a full cleanup at the end of each day.
+                  <strong>Respect for Your Home:</strong> Careful masking and
+                  daily cleanup.
                 </li>
               </ul>
             </div>
 
             <div className="image-column">
-              <img src={res1} alt="Freshly painted interior" />
+              <img src={res1} alt="Detail work on trim and walls" />
             </div>
           </div>
+
           <h2>How We Work</h2>
           <ul>
             <li>
-              Quote & Walkthrough <br />
-              We assess the space and your needs. You get a clear, written
-              quote—no vague estimates.
+              <strong>Quote & Walkthrough:</strong> We assess your space and
+              provide a clear written quote.
             </li>
             <li>
-              Prep & Setup <br />
-              You’ll receive a short checklist to prep your space. We handle the
-              rest: protecting surfaces, patching, and priming.
+              <strong>Prep & Setup:</strong> You get a short prep checklist; we
+              handle protection, patching, and priming.
             </li>
             <li>
-              Painting Begins <br />
-              We stick to the schedule, work quietly and cleanly, and keep you
-              informed throughout. One job at a time—yours.
+              <strong>Painting:</strong> We stick to schedule, work cleanly, and
+              keep you informed.
             </li>
             <li>
-              Walkthrough & Wrap-Up Final <br />
-              inspection with you, followed by cleanup. The space is ready to
-              enjoy immediately.
+              <strong>Final Walkthrough:</strong> Inspection together, then
+              cleanup. Ready to enjoy immediately.
             </li>
           </ul>
+
           <h2>FAQs</h2>
           <div className="faqs">
-            <div className="faq-accordion">
-              {faqs.map((faq, index) => (
-                <AccordionItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))}
-            </div>
+            {faqs.map((f, i) => (
+              <AccordionItem key={i} question={f.question} answer={f.answer} />
+            ))}
           </div>
+
           <h2>Get Started</h2>
           <p>
-            Booking is straightforward — we only take on one job at a time, so
-            you get full focus. If you're ready to paint or just want to talk
-            options,
-            <a href="/quote"> request a quote</a> and we’ll get back to you
-            within 24 hours.
+            We book one job at a time so you get full focus. Ready to paint or
+            want options?{" "}
+            <Link to="/quote" className="inline-link">
+              Request a quote
+            </Link>{" "}
+            and we’ll reply within 1 business day.
           </p>
         </section>
       </div>
     </div>
   );
 }
-
-export default ResidentialServices;
