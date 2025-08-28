@@ -95,7 +95,8 @@ const Services = () => {
             <h2>Request a Quote</h2>
             <div>
               If you’re ready to get started — or just want to see if we’re a
-              good fit — <a href="/quote">reach out for a free estimate</a>.
+              good fit —{" "}
+              <Link href="/quote">reach out for a free estimate</Link>.
             </div>
             <div>
               Let us know your goals, and we’ll walk you through the best
