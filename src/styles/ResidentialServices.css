@@ -1,0 +1,52 @@
+.residential-services {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  color: #222;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.residential-services h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #c9853d;
+}
+
+.residential-services h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #c9853d;
+}
+
+.residential-services ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.residential-services li {
+  margin-bottom: 0.8rem;
+}
+
+.residential-services a {
+  color: #c9853d;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .residential-services {
+    padding: 2rem 1rem;
+  }
+
+  .residential-services h1 {
+    font-size: 2rem;
+  }
+
+  .residential-services h2 {
+    font-size: 1.25rem;
+  }
+}
