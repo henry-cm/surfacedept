@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../styles/ResidentialServices.css";
 
 import res1 from "../assets/images/res/res.jpg";
-import res2 from "../assets/images/res/res2go.jpg";
+import res2 from "../assets/images/res/res2 .jpg";
 
 const faqs = [
   {
