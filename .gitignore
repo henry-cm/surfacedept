@@ -16,16 +16,7 @@ dist-ssr
 .env
 .env.*.local
 
-cat > .gitignore <<'EOF'
-node_modules/
-dist/
-.vite/
-.vercel/
-.DS_Store
-*.log
-.env
-.env.*.local
-EOF
+
 
 # Editor directories and files
 .vscode/*
