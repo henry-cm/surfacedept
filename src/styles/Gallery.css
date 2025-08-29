@@ -2,7 +2,7 @@
 .gallery-page-wrapper {
   position: relative;
   min-height: 100vh; /* full screen height */
-  width: 100%;
+
   overflow-x: hidden;
   background-color: #f9f9f9;
 }
